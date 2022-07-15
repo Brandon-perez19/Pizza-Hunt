@@ -5,7 +5,8 @@ const {addComment, removeComment, addReply, removeReply} = require('../../contro
 router.route('/:pizzaId').post(addComment);
 
 // /api/comments/:pizzaId/:commentId
-router.route('/:pizzaId/:commentId')
+router
+.route('/:pizzaId/:commentId')
 .put(addReply)
 .delete(removeComment);
 
