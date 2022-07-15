@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -13,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/pizza-hun
     useUnifiedTopology: true
 });
 
-// Use this to log mongo queries being executed!
+//use this to log mongo queries being excuted
 mongoose.set('debug', true);
 
 app.use(require('./routes'));
