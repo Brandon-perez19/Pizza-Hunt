@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGOB_URI, {
+const uri = process.env.MONGOB_URI 
+
+mongoose.connect(`mongodb://localhost:27017/pizza-hunt`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
