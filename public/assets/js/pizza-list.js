@@ -28,7 +28,7 @@ const printPizza = ({ _id, pizzaName, toppings, size, commentCount, createdBy, c
 };
 
 const getPizzaList = () => {
-  fetch('/api/pizzas')
+  fetch('/api/pizzas/')
   .then(response => response.json())
   .then(pizzaListArr => {
     pizzaListArr.forEach(printPizza);
