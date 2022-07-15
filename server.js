@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGOB_URI || `mongodb://localhost:${PORT}/pizza-hunt`, {
+mongoose.connect(process.env.MONGOB_URI || `mongodb://localhost:27017/pizza-hunt`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
